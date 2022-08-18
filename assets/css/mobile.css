@@ -1,0 +1,61 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+/* -----Color */
+/* Border color  */
+/* border item{
+    border: #D1D1D1 1px solid;
+}
+border button{
+    border: #494949 1px solid;
+} */
+
+/* background-body{
+    background-color: #FBFBFB;
+    color: #33312F;
+} */
+
+/* Price */
+/* price-product{
+ color: #b4b4b4;   
+} */
+
+/* color footer */
+/* p, i{
+    color: #A7A5A5
+} */
+
+
+/* -----Taille typographie */
+
+/* text - title */
+/* p, i{
+    font-size: 18px;
+} */
+
+/* h1{
+    font-size: 3rem;
+} */
+
+/* h2{
+    font-size: 6rem;
+} */
+
+/* h3, h4, h5{
+    font-size: 2rem;
+} */
+
+
+/* -----Button */
+/* Button product card */
+/* button{
+    padding: 10px 20px;
+} */
+
+/* Button more product */
+/* button{
+    padding: 15px;
+} */
