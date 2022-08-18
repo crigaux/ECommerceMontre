@@ -1,2 +1,33 @@
+/* ------------------------------ */
+@media screen and (min-width : 1200px ) {
+    
+    .main-container_selected-watch {
+        padding: 4.6rem 3rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .main-container_selected-watch .container_selected-watch{
+        display: flex;
+        justify-content: space-evenly;
+        overflow-X: hidden;
+    }
+
+    .selected-watch:hover img {
+        transform: scale(1.05);
+        transition: 1s;
+    }
+
+    .container_selected-watch .selected-watch {
+        padding: 1.8rem;
+        cursor: pointer;
+    }
+}
+/* ------------------------------ */
+
+
+
 
 
