@@ -1,8 +1,8 @@
-/* *{
+*, ::after, ::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-} */
+}
 
 /* -----Color */
 /* Border color  */
@@ -59,3 +59,5 @@ border button{
 /* button{
     padding: 15px;
 } */
+
+
