@@ -1,5 +1,79 @@
+@font-face {
+    font-family: 'Neutraface';
+    src: url(../font/Neutraface/Neutraface\ Text\ Demi.otf);
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../font/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
 *, ::after, ::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* -----Color */
+/* Border color  */
+/* border item{
+    border: #D1D1D1 1px solid;
+}
+border button{
+    border: #494949 1px solid;
+} */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FBFBFB;
+    color: #33312F;
+    font-size: 18px;
+    max-width: 1980px;
+}
+
+/* Price */
+/* price-product{
+ color: #b4b4b4;   
+} */
+
+/* color footer */
+/* p, i{
+    color: #A7A5A5
+} */
+
+
+/* -----Taille typographie */
+
+/* text - title */
+h1, h2, h3, h4, h5 {
+    font-family: 'Neutraface', sans-serif;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 6rem;
+}
+
+h3, h4, h5{
+    font-size: 2rem;
+}
+
+
+/* -----Button */
+/* Button product card */
+/* button{
+    padding: 10px 20px;
+} */
+
+/* Button more product */
+/* button{
+    padding: 15px;
+} */
+
+
