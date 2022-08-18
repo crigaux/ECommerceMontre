@@ -76,4 +76,11 @@ h3, h4, h5{
     padding: 15px;
 } */
 
-
+.heroBanner {
+    background-image: url('../img/heroBannerBG.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: calc(100vh - 80px);
+    width: 100%;
+}
