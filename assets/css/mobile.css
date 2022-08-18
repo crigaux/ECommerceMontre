@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Neutraface';
+    src: url(../font/Neutraface/Neutraface\ Text\ Demi.otf);
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../font/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
 *, ::after, ::before {
     margin: 0;
     padding: 0;
@@ -13,10 +22,17 @@ border button{
     border: #494949 1px solid;
 } */
 
-/* background-body{
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
     background-color: #FBFBFB;
     color: #33312F;
-} */
+    font-size: 18px;
+    max-width: 1980px;
+}
 
 /* Price */
 /* price-product{
@@ -32,21 +48,21 @@ border button{
 /* -----Taille typographie */
 
 /* text - title */
-/* p, i{
-    font-size: 18px;
-} */
+h1, h2, h3, h4, h5 {
+    font-family: 'Neutraface', sans-serif;
+}
 
-/* h1{
+h1{
     font-size: 3rem;
-} */
+}
 
-/* h2{
+h2{
     font-size: 6rem;
-} */
+}
 
-/* h3, h4, h5{
+h3, h4, h5{
     font-size: 2rem;
-} */
+}
 
 
 /* -----Button */
