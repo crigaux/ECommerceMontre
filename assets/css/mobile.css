@@ -67,7 +67,7 @@ h1 {
     font-size: 3rem;
 }
 
-h2 {
+h2 {f
     font-size: 6rem;
 }
 
@@ -98,6 +98,7 @@ h5 {
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     height: calc(100vh - 80px);
     width: 100%;
 }

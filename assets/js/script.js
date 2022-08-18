@@ -11,7 +11,7 @@ function createProductCard(element) {
         <h4>${element.title}</h4>
         <p class="productPrice">${element.price}€</p>
         <p class="productDesc">${element.desc}</p>
-        <button>ajouter au panier</button>
+        <button id="${element.id}">ajouter au panier</button>
     </div>`
 }
 
