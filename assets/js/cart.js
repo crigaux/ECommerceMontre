@@ -15,13 +15,17 @@ function addToCart();
 
 function increaseQuantity();
 
-// Au clic sur le bouton "-", récupérer l'article dans le local storage (avec son Id), décrémenter sa quantité et restocker l'objet en local storage
+// Au clic sur le bouton "-", récupérer l'article dans le local storage (avec son Id), décrémenter sa quantité et restocker l'objet en local storage, si quantité = 0 : 
 
 function decreaseQuantity();
 
 // Au clic sur l'icone "poubelle", supprimer l'objet correspondant dans le local storage qu'importe sa quantité (avec son Id)
 
 function deleteProduct();
+
+// Vider le local storage au clic sur "Vider le panier"
+
+function emptyCart();
 
 // A chaque ajout de produit, ajouter le prix de l'article au total du panier
 

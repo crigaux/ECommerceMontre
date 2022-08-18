@@ -67,6 +67,10 @@ h2 {
     font-size: 6rem;
 }
 
+.productsContainer h2{
+    font-size: 1.8rem;
+}
+
 h3,
 h4,
 h5 {
@@ -124,7 +128,7 @@ h1::after {
 }
 
 .container_selected-watch .selected-watch {
-    margin: 6.6rem 1rem;
+    margin: 6.6rem 1rem 0 1rem;
     padding: 1rem;
     border: #D1D1D1 1px solid;
 }
@@ -133,4 +137,90 @@ h1::after {
     margin-bottom: 20px;
     transition: 1s;
 }
+
 /* ------------------------------ */
+
+#classic, #luxe, #connected {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.classic, .luxe, .connected {
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 6rem;
+    color: #fbfbfb;
+    padding-left: 2rem;
+    margin: 2rem 0 1.5rem 0;
+}
+
+.classic {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url('../img/bgClassicSection.jpg');
+}
+
+.luxe {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url('../img/bgLuxeSection.jpg');
+}
+
+.connected {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url('../img/bgConnectedSection.jpg');
+}
+
+.productsContainer h2 {
+    width: 100%;
+}
+
+.productCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    height: 380px;
+    margin: 2rem 0;
+    border: #D1D1D1 1px solid;
+}
+
+.productCard img {
+    align-self: center;
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
+    margin-top: 1.5rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem 0;
+}
+
+.productPrice {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    color: #b4b4b4; 
+}
+
+.productDesc {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem 2rem;
+    font-size: 0.8rem;
+    height: 10rem;
+}
+
+.productCard button {
+    background-color: #FDFDFD;
+    border: #494949 1px solid;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+}
