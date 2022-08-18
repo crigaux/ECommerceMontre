@@ -5,7 +5,9 @@
 function createProductCard(element) {
     document.getElementById(element.type).innerHTML += 
     `<div class="productCard">
-        <img src="${element.image}" alt="image de montre">
+        <div class="productImg">
+            <img src="${element.image}" alt="image de montre">
+        </div>
         <h4>${element.title}</h4>
         <p class="productPrice">${element.price}€</p>
         <p class="productDesc">${element.desc}</p>

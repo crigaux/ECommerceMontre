@@ -185,14 +185,22 @@ h1::after {
     height: 380px;
     margin: 2rem 0;
     border: #D1D1D1 1px solid;
+    background-color: #f5f5f5;
 }
 
-.productCard img {
+.productImg {
     align-self: center;
     height: 120px;
     width: 100%;
-    object-fit: cover;
     margin-top: 1.5rem;
+    padding: 0 1.5rem;
+}
+
+.productCard img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
 }
 
 h4 {
@@ -223,4 +231,11 @@ h4 {
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.productCard button:hover {
+    background-color: #3d3d3d;
+    color: #fbfbfb;
 }

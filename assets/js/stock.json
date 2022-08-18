@@ -4,7 +4,7 @@
             "id": 1,
             "type": "classic",
             "title": "Possession",
-            "image": "./assets/img/img1.jpg",
+            "image": "./assets/img/img1.png",
             "desc": "Montre Possession 29 mm. Boîtier en acier serti d'un diamant taille brillant (env. 0,05 ct).",
             "price": 4950
         },
@@ -12,7 +12,7 @@
             "id": 2,
             "type": "classic",
             "title": "Piaget Polo Date",
-            "image": "./assets/img/img2.jpg",
+            "image": "./assets/img/img2.png",
             "desc": "Montre Piaget Polo Date, 36 mm. Boîtier en acier. Cadran avec index en or blanc 750/1000, serti de 36 diamants taille brillant (env. 0,07 ct).",
             "price": 13800
         },
@@ -20,7 +20,7 @@
             "id": 3,
             "type": "classic",
             "title": "Polo Chronographe",
-            "image": "./assets/img/img3.jpg",
+            "image": "./assets/img/img3.png",
             "desc": "Montre Piaget Polo 42mm. Boîtier en acier. Cadran avec index luminescents. Fond saphir. Mouvement mécanique Manufacture Piaget 1160P à remontage automatique avec chronographe et date.",
             "price": 15800
         },
@@ -28,7 +28,7 @@
             "id": 4,
             "type": "classic",
             "title": "Polo Date",
-            "image": "./assets/img/img4.jpg",
+            "image": "./assets/img/img4.png",
             "desc": "Montre Piaget Polo Date, 36 mm. Boîtier en acier serti de 60 diamants taille brillant (env. 0,97 ct). Cadran avec index en or rose 750/1000, serti de 36 diamants taille brillant (env. 0,08 ct).",
             "price": 21000
         },
@@ -37,7 +37,7 @@
             "id": 5,
             "type": "luxe",
             "title": "Altiplano Ultimate",
-            "image": "./assets/img/img5.jpg",
+            "image": "./assets/img/img5.png",
             "desc": "Montre Altiplano Ultimate Automatic, 41 mm. Boîtier en or blanc 750/1000 serti de 90 diamants taille brillant (env. 0,58 ct). L'une des montres à remontage automatique les plus plates au monde",
             "price": 43000
         },
@@ -45,7 +45,7 @@
             "id": 6,
             "type": "luxe",
             "title": "Piaget Polo Squelette",
-            "image": "./assets/img/img6.jpg",
+            "image": "./assets/img/img6.png",
             "desc": "Montre Piaget Polo Skeleton, 42 mm. Boîtier en or rose 750/1000. Bracelet interchangeable. Fond saphir. Mouvement mécanique squelette extra-plat Manufacture Piaget 1200S1 à remontage automatique (2,4 mm).",
             "price": 46200
         },
@@ -53,7 +53,7 @@
             "id": 7,
             "type": "luxe",
             "title": "Polo Emperador Squelette",
-            "image": "./assets/img/img7.jpg",
+            "image": "./assets/img/img7.png",
             "desc": "Montre squelette tourbillon en forme de coussin Piaget Polo Emperador, 49 mm. Boîtier en or blanc 750/1000 serti de 649 diamants taille brillant (env. 4,16 ct), de 92 diamants taille baguette (env. 2,92 ct) et de 44 saphirs.",
             "price": 36000
         },
@@ -61,7 +61,7 @@
             "id": 8,
             "type": "luxe",
             "title": "Altiplano Origin",
-            "image": "./assets/img/img8.jpg",
+            "image": "./assets/img/img8.png",
             "desc": "Montre Altiplano, 38 mm. Boîtier en or rose 750/1000. Cadran laqué bleu avec index en or rose. Mouvement mécanique extra-plat Manufacture Piaget 430P à remontage manuel.",
             "price": 29200
         },
@@ -70,7 +70,7 @@
             "id": 9,
             "type": "connected",
             "title": "Hybrid Smartwatch HR",
-            "image": "./assets/img/img9.jpg",
+            "image": "./assets/img/img9.png",
             "desc": "Les montres connectées Skagen fonctionnent avec les téléphones exécutant la dernière version d'Android ou d'iOS. Les fonctionnalités prises en charge peuvent varier d'un pays à l'autre, la compatibilité pouvant être modifiée.",
             "price": 3500
         },
@@ -78,7 +78,7 @@
             "id": 10,
             "type": "connected",
             "title": "Falster Gen 6 Rose Gold",
-            "image": "./assets/img/img10.jpg",
+            "image": "./assets/img/img10.png",
             "desc": "Wear OS by Google fonctionne avec les téléphones exécutant la dernière version d'Android™ (à l'exception de l'édition Go et des téléphones sans Google Play Store) ou iOS.",
             "price": 2200
         },
@@ -86,7 +86,7 @@
             "id": 11,
             "type": "connected",
             "title": "Falster Gen 6 Midnight",
-            "image": "./assets/img/img11.jpg",
+            "image": "./assets/img/img11.png",
             "desc": "Wear OS by Google fonctionne avec les téléphones exécutant la dernière version d'Android™ (à l'exception de l'édition Go et des téléphones sans Google Play Store) ou iOS.",
             "price": 2500
         },
@@ -94,7 +94,7 @@
             "id": 12,
             "type": "connected",
             "title": "Hybrid Smartwatch HR",
-            "image": "./assets/img/img12.jpg",
+            "image": "./assets/img/img12.png",
             "desc": "Les montres connectées Skagen fonctionnent avec les téléphones exécutant la dernière version d'Android ou d'iOS. Les fonctionnalités prises en charge peuvent varier d'un pays à l'autre, la compatibilité pouvant être modifiée.",
             "price": 2200
         }
