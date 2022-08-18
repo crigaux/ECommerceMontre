@@ -6,12 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/7194bdd5cb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/css/mobile.css">
+    <!-- navbar css added -->
+    <link rel="stylesheet" href="./assets/css/navbar.css">
     <title>Document</title>
 </head>
 <body>
-    <button id="shoppingCart">
-            <img src="./assets/img/cart-shopping-solid.svg"/>
-    </button>
-    <nav id="navbar"></nav>
+    <nav>
+        <div class="navInfo">
+            <!-- mobile version, numero.onClick go to call  -->
+            <a href="tel:666"><p><i class="fa-solid fa-phone" ></i><span>666-666</span></p></a>
+            <!-- adress.onClick go to google -->
+            <a href="https://g.page/LaManu-Amiens?share" target="_blank"><p><i class="fa-solid fa-location-dot" ></i><span>70 Rue des Jacobins, 80000 Amiens</span></p></a>
+        </div>
+        <!-- on logo img , add HREF with id link to the top of page -->
+        <img class="navLogo" src="./assets/img/logo_watchies.svg" href="#" /> 
+        <button id="navShoppingCartBtn" href='#final'><i class="fa-solid fa-cart-shopping"></i></button>
+    </nav>
 </body>
 </html>
