@@ -1,2 +1,27 @@
+@media screen and (min-width: 1200px) {
+    .classic, .luxe, .connected {
+        height: 10rem;
+    }
 
+    h2 {
+        font-size: 3rem;
+    }
+
+    #classic, #luxe, #connected {
+        flex-direction: row;
+        margin: 0 1rem;
+    }
+
+    .productCard {
+        margin: 5rem 1rem;
+    }
+
+    .productCard button {
+        padding: 0.5rem 1rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+}
 
