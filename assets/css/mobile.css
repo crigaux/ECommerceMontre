@@ -16,6 +16,10 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* -----Color */
 /* Border color  */
 /* border item{
@@ -124,4 +128,82 @@ h1::after {
     margin-bottom: 20px;
     transition: 1s;
 }
+
 /* ------------------------------ */
+
+/* ------------------------------ */
+/* section selected watch */
+footer {
+    background-color: #33312F;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+footer h5 {
+    color: #FBFBFB;
+    margin-bottom: 1rem;
+}
+
+footer p,
+footer a {
+    color: #A7A5A5;
+    font-size: 1rem;
+}
+
+footer .top-container_footer p {
+    margin-bottom: 1rem;
+}
+
+footer .container_social-network {
+    display: flex;
+    justify-content: center;
+}
+
+footer .container_social-network a {
+    height: 2.8rem;
+    width: 2.8rem;
+    padding: 10px;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #A7A5A5;
+    border-radius: 100%;
+}
+
+footer .container_social-network a:hover {
+    border: 1px solid #FBFBFB;
+}
+
+footer a:hover {
+    color: #FBFBFB;
+}
+
+footer hr {
+    width: 35%;
+    margin: 2rem auto;
+    background-color: #A7A5A5;
+    border: 1px solid #A7A5A5;
+}
+
+footer .bottom-container_footer img {
+    width: 150px;
+}
+
+footer .credits {
+    margin: 1rem 0;
+}
+
+footer .credits p {
+    margin-top: 1rem;
+}
+
+footer .mentions-légales{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+footer .mentions-légales a{
+    margin-bottom: 5px;
+}
