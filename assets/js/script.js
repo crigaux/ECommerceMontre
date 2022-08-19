@@ -1,17 +1,17 @@
-// Récupère le nom de l'élément et crée une carte de produit en injectant du html dans l'index.html
-// Les données qui doivent apparaître dans une carte sont : "id" (en display none), "image", "title", "desc", "price"
+// Récupère le nom d'un produit et crée une carte en injectant du html dans l'index.html
+// Les données qui doivent apparaître dans une carte sont : "image", "title", "desc", "price"
 // Trier les produits en fonction de leur "type" (classic, luxe, connected) pour savoir où injecter le html
 
-function createProductCard(element) {
-    document.getElementById(element.type).innerHTML += 
+function createProductCard(product) {
+    document.getElementById(product.type).innerHTML += 
     `<div class="productCard">
         <div class="productImg">
-            <img src="${element.image}" alt="image de montre">
+            <img src="${product.image}" alt="image de montre">
         </div>
-        <h4>${element.title}</h4>
-        <p class="productPrice">${element.price}€</p>
-        <p class="productDesc">${element.desc}</p>
-        <button id="${element.id}">ajouter au panier</button>
+        <h4>${product.title}</h4>
+        <p class="productPrice">${product.price}€</p>
+        <p class="productDesc">${product.desc}</p>
+        <button id="${product.id}">ajouter au panier</button>
     </div>`
 }
 
