@@ -17,6 +17,10 @@ navShoppingCartBtn.addEventListener("click", () => {
     modaleOpen();
 })
 
+continueShopping.addEventListener("click", () => {
+    modaleOpen();
+})
+
 btnCloseModale.addEventListener("click", () => {
     modaleOpen()
 })

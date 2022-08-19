@@ -6,8 +6,8 @@ const containerItems = document.querySelector(".containerItems");
 
 
 function createProductCard(product) {
-    document.getElementById(product.type).innerHTML += 
-    `<div class="productCard">
+    document.getElementById(product.type).innerHTML +=
+        `<div class="productCard">
         <div class="productImg">
             <img src="${product.image}" alt="image de montre">
         </div>
@@ -17,12 +17,13 @@ function createProductCard(product) {
         <button class="btnAddProduct" id="${product.id}">ajouter au panier</button>
     </div>`
 }
+let product;
 
 window.addEventListener('load', () => {
-    for(i=0 ; i < localStorage.length ; i++) {
-        let product = JSON.parse(localStorage.getItem(localStorage.key(i)))
+    for (i = 0; i < localStorage.length; i++) {
+        product = JSON.parse(localStorage.getItem(localStorage.key(i)))
         containerItems.innerHTML +=
-        `
+            `
         <div class="cartProductCard">
             <div class="imgCart">
                 <img src="${product.image}">
@@ -32,49 +33,81 @@ window.addEventListener('load', () => {
                 <span>${product.price}€</span>
                 <span>${product.price * product.quantity}€</span>
             </div>
+            <div>
+            <div class="addproduct-ctn">
+                <button><i class="fa-solid fa-plus"></i></button>
+                <div>${product.quantity}</div>
+                <button><i class="fa-solid fa-minus"></i></button>
+            </div>
+            </div>
+            <div class="ctn-delete-product">
+                <button class="delete-product"><i class="fa-solid fa-trash"></i></button>
+            </div>
         </div>
         `
     }
 })
 
 fetch('/assets/js/stock.json')
-.then(function(response) {
-    return response.json();
-})
-.then(function(json) {
-    json.stock.forEach(element => {
-        createProductCard(element);
-    });
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (json) {
+        json.stock.forEach(element => {
+            createProductCard(element);
+        });
 
-    const btnAddProduct = document.querySelectorAll(".btnAddProduct");
+
+        const btnAddProduct = document.querySelectorAll(".btnAddProduct");
         btnAddProduct.forEach((btn) => {
             btn.addEventListener("click", (e) => {
-                addToCart(e, json.stock);
-                for(i=0 ; i < localStorage.length ; i++) {
-                    if(btn.id == localStorage.key(i)){
-                        product = JSON.parse(localStorage.getItem(localStorage.key(i)))
-                        containerItems.innerHTML +=
-                        `
-                        <div class="cartProductCard">
-                            <div class="imgCart">
-                                <img src="${product.image}">
+                if (localStorage.length == 0) {
+                    addToCart(e, json.stock);
+                } else {
+                    for (i = 0; i < localStorage.length; i++) {
+                        let test = JSON.parse(localStorage.getItem(localStorage.key(i)))
+                        console.log(test);
+                        // console.log(test.id, btn.id);
+                        if (test.id == btn.id) {
+                            console.log("wsh");
+                        }
+                        else {
+                            addToCart(e, json.stock);
+                            product = JSON.parse(localStorage.getItem(localStorage.key(i)))
+                            containerItems.innerHTML +=
+                                `
+                            <div class="cartProductCard">
+                                <div class="imgCart">
+                                    <img src="${product.image}">
+                                </div>
+                                <div class="productInfo">
+                                    <h4>${product.title}</h4>
+                                    <span>${product.price}€</span>
+                                    <span>${product.price * product.quantity}€</span>
+                                </div>
+                                <div>
+                                <div class="addproduct-ctn">
+                                    <button><i class="fa-solid fa-plus"></i></button>
+                                    <div>${product.quantity}</div>
+                                    <button><i class="fa-solid fa-minus"></i></button>
+                                </div>
+                                </div>
+                                <div class="ctn-delete-product">
+                                    <button class="delete-product"><i class="fa-solid fa-trash"></i></button>
+                                </div>
                             </div>
-                            <div class="productInfo">
-                                <h4>${product.title}</h4>
-                                <span>${product.price}€</span>
-                                <span>${product.price * product.quantity}€</span>
-                            </div>
-                        </div>
-                        `
+                            `
+                        }
                     }
                 }
+                // if (btn.id == localStorage.key(i)) {
             })
         })
-    });
-    
+    })
+
 const addToCart = (e, stock) => {
     stock.forEach((elem) => {
-        if (elem.id == e.target.id){
+        if (elem.id == e.target.id) {
             localStorage.setItem(elem.id, JSON.stringify(elem));
         }
     })
