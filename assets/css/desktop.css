@@ -100,4 +100,11 @@
     footer .bottom-container_footer .mentions-légales {
         margin: 2rem 0;
     }
+
+
+/* ---------------- */
+    /* Modale */
+    .container-basket {
+        width: 30vw;
+    }
 }
