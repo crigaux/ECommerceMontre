@@ -1,7 +1,7 @@
 @media screen and (min-width : 1200px ) {
 
     #navShoppingCartBtn{
-        margin-left: 30%;
+        cursor: pointer;
     }
 
     .main-container_selected-watch {
@@ -21,11 +21,6 @@
     .container_selected-watch .selected-watch {
         margin-left: 2rem;
         margin-right: 2rem;
-    }
-
-    .selected-watch:hover img {
-        transform: scale(1.05);
-        transition: 1s;
     }
 
     .container_selected-watch .selected-watch {
@@ -48,10 +43,6 @@
 
     .productCard {
         margin: 5rem 1rem;
-    }
-
-    .productCard button {
-        padding: 0.5rem 1rem;
     }
 
     h4 {
@@ -97,7 +88,7 @@
         width: 150px;
     }
 
-    footer .bottom-container_footer .mentions-légales {
+    footer .bottom-container_footer .legal-mentions {
         margin: 2rem 0;
     }
 

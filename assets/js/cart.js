@@ -4,21 +4,17 @@
 
 // ------- Modale
 
-// const toggleModale = () => {
-
-// }
-
 const modale = document.querySelector(".modale-background");
 const basket = document.querySelector(".container-basket");
 const btnCloseModale = document.querySelector(".btn-close-modale")
-console.log(btnCloseModale);
+const backgroundModale = document.querySelector(".modale-background")
 
 navShoppingCartBtn.addEventListener("click", () => {
-    modaleOpen();
+    modaleOpen()
 })
 
 continueShopping.addEventListener("click", () => {
-    modaleOpen();
+    modaleOpen()
 })
 
 btnCloseModale.addEventListener("click", () => {
@@ -29,10 +25,6 @@ const modaleOpen = () => {
     modale.classList.toggle("modaleActive")
     document.body.classList.toggle("bodyActive")
     basket.classList.toggle("containerBasketActive")
-}
-
-const modaleClose = () => {
-    
 }
 
 

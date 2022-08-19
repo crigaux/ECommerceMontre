@@ -20,15 +20,6 @@ a {
     text-decoration: none;
 }
 
-/* -----Color */
-/* Border color  */
-/* border item{
-    border: #D1D1D1 1px solid;
-}
-border button{
-    border: #494949 1px solid;
-} */
-
 html {
     scroll-behavior: smooth;
 }
@@ -36,22 +27,9 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #FBFBFB;
-    color: #33312F;
+    color: #37332D;
     font-size: 18px;
 }
-
-/* Price */
-/* price-product{
-    color: #b4b4b4;   
-} */
-
-/* color footer */
-/* p, i{
-    color: #A7A5A5
-} */
-
-
-/* -----Taille typographie */
 
 /* text - title */
 h1,
@@ -79,18 +57,6 @@ h4,
 h5 {
     font-size: 2rem;
 }
-
-
-/* -----Button */
-/* Button product card */
-/* button{
-    padding: 10px 20px;
-} */
-
-/* Button more product */
-/* button{
-    padding: 15px;
-} */
 
 .heroBanner {
     background-image: url('../img/heroBannerBG.jpg');
@@ -132,14 +98,27 @@ h1::after {
 }
 
 .container_selected-watch .selected-watch {
-    margin: 6.6rem 1rem 0 1rem;
+    margin: 6.6rem 1rem 0 1.8rem;
     padding: 1rem;
     border: #D1D1D1 1px solid;
 }
 
-.container_selected-watch .selected-watch img {
-    margin-bottom: 20px;
-    transition: 1s;
+.container_selected-watch .selected-watch h3{
+    margin-top: 20px;
+}
+
+.img-container{
+    display: inline-block;
+    overflow: hidden;
+}
+
+.img-container img{
+    transition: all 3s;
+   display: block;
+}
+
+.selected-watch:hover img{
+  transform: scale(1.1);
 }
 
 /* ------------------------------ */
@@ -208,7 +187,6 @@ h1::after {
     height: 100%;
     width: 100%;
     object-fit: cover;
-
 }
 
 h4 {
@@ -233,6 +211,7 @@ h4 {
 
 .productCard button {
     background-color: #FDFDFD;
+    color: #37332D;
     border: #494949 1px solid;
     position: absolute;
     bottom: -20px;
@@ -241,6 +220,7 @@ h4 {
     padding: 10px 20px;
     cursor: pointer;
     transition: 300ms;
+    width: 60%;
 }
 
 .productCard button:hover {
@@ -299,7 +279,7 @@ footer a:hover {
 
 footer hr {
     width: 35%;
-    margin: 2rem auto;
+    margin: 3rem auto;
     background-color: #A7A5A5;
     border: 1px solid #A7A5A5;
 }
@@ -316,13 +296,13 @@ footer .credits p {
     margin-top: 1rem;
 }
 
-footer .mentions-légales {
+footer .legal-mentions {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
 }
 
-footer .mentions-légales a {
+footer .legal-mentions a {
     margin-bottom: 5px;
 }
 
@@ -400,6 +380,7 @@ footer .mentions-légales a {
     transition: 300ms;
     border-radius: 5px;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .title-basket .btn-close-modale:hover{
@@ -408,6 +389,7 @@ footer .mentions-légales a {
 
 .title-basket .btn-close-modale .cross{
     font-size: 2rem;
+    
 }
 .title-basket .btn-close-modale:hover .cross{
     color : #FDFDFD;
@@ -416,7 +398,7 @@ footer .mentions-légales a {
 .containerItems{
     border-bottom:1px solid #33312F;
     overflow-y: scroll;
-    height: calc(80vh - 101px);
+    height: calc(60vh - 101px);
 }
 
 .cartProductCard {
@@ -505,16 +487,20 @@ color: #FBFBFB;
 transition: 300ms;
 }
 
-#continueShopping{
+.btn-modale{
+    font-size: 1.5rem;
+    transition: 300ms;
+    cursor: pointer;
     display: block;
     width: 90%;
     margin: 20px auto;
     padding: 20px 0;
+    max-width: 25rem;
+}
+
+#continueShopping{
     background-color: #FBFBFB;
     color: #33312F;
-    font-size: 1.5rem;
-    transition: 300ms;
-    cursor: pointer;
 }
 
 #continueShopping:hover{
@@ -523,8 +509,12 @@ transition: 300ms;
     transition: 300ms;
 }
 
+#btnCheckout{
+    background-color: #33312F;
+    color: #FBFBFB;
+}
 
+#btnCheckout:hover{
+    background-color: #33312fb9;
 
-
-
-
+}

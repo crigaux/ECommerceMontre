@@ -3,7 +3,7 @@
 // Trier les produits en fonction de leur "type" (classic, luxe, connected) pour savoir où injecter le html
 
 const containerItems = document.querySelector(".containerItems");
-
+let product;
 
 function createProductCard(product) {
     document.getElementById(product.type).innerHTML +=
@@ -17,9 +17,16 @@ function createProductCard(product) {
         <button class="btnAddProduct" id="${product.id}">ajouter au panier</button>
     </div>`
 }
-let product;
 
-window.addEventListener('load', () => {
+
+function increaseQuantity(id) {
+    let product = JSON.parse(localStorage.getItem(id));
+    product.quantity++;
+    localStorage.setItem(id, JSON.stringify(product));
+}
+
+function displayCart() {
+    containerItems.innerHTML = '';
     for (i = 0; i < localStorage.length; i++) {
         product = JSON.parse(localStorage.getItem(localStorage.key(i)))
         containerItems.innerHTML +=
@@ -35,17 +42,21 @@ window.addEventListener('load', () => {
             </div>
             <div>
             <div class="addproduct-ctn">
-                <button><i class="fa-solid fa-plus"></i></button>
-                <div>${product.quantity}</div>
                 <button><i class="fa-solid fa-minus"></i></button>
+                <div>${product.quantity}</div>
+                <button><i class="fa-solid fa-plus"></i></button>
             </div>
-            </div>
+        </div>
             <div class="ctn-delete-product">
                 <button class="delete-product"><i class="fa-solid fa-trash"></i></button>
             </div>
         </div>
         `
     }
+}
+
+window.addEventListener('load', () => {
+    displayCart();
 })
 
 fetch('/assets/js/stock.json')
@@ -57,50 +68,25 @@ fetch('/assets/js/stock.json')
             createProductCard(element);
         });
 
-
         const btnAddProduct = document.querySelectorAll(".btnAddProduct");
         btnAddProduct.forEach((btn) => {
             btn.addEventListener("click", (e) => {
                 if (localStorage.length == 0) {
                     addToCart(e, json.stock);
+                    displayCart();
                 } else {
                     for (i = 0; i < localStorage.length; i++) {
-                        let test = JSON.parse(localStorage.getItem(localStorage.key(i)))
-                        console.log(test);
-                        // console.log(test.id, btn.id);
-                        if (test.id == btn.id) {
-                            console.log("wsh");
-                        }
-                        else {
+                        product = JSON.parse(localStorage.getItem(localStorage.key(i)))
+                        if (btn.id == product.id) {
+                            console.log("déjà présent");
+                            increaseQuantity(btn.id);
+                            displayCart();
+                        } else {
                             addToCart(e, json.stock);
-                            product = JSON.parse(localStorage.getItem(localStorage.key(i)))
-                            containerItems.innerHTML +=
-                                `
-                            <div class="cartProductCard">
-                                <div class="imgCart">
-                                    <img src="${product.image}">
-                                </div>
-                                <div class="productInfo">
-                                    <h4>${product.title}</h4>
-                                    <span>${product.price}€</span>
-                                    <span>${product.price * product.quantity}€</span>
-                                </div>
-                                <div>
-                                <div class="addproduct-ctn">
-                                    <button><i class="fa-solid fa-plus"></i></button>
-                                    <div>${product.quantity}</div>
-                                    <button><i class="fa-solid fa-minus"></i></button>
-                                </div>
-                                </div>
-                                <div class="ctn-delete-product">
-                                    <button class="delete-product"><i class="fa-solid fa-trash"></i></button>
-                                </div>
-                            </div>
-                            `
+                            displayCart();
                         }
                     }
                 }
-                // if (btn.id == localStorage.key(i)) {
             })
         })
     })
@@ -112,4 +98,3 @@ const addToCart = (e, stock) => {
         }
     })
 }
-
