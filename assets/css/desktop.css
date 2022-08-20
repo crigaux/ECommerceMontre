@@ -148,11 +148,11 @@
     .containerBasketActive {
         right: 0;
     }
-}
 
 @media(min-width: 600px){
 
     nav{
         justify-content:center;
     }
+}
 }

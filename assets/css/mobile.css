@@ -80,7 +80,7 @@ nav{
 }
 
 a img {
-    width: 200px;
+    width: 175px;
 }
 
 #navShoppingCartBtn{
@@ -144,40 +144,41 @@ a img {
 /* ------------------------------ */
 /* section selected watch */
 
+/* section selected watch */
+
 .main-container_selected-watch {
-    padding: 4.6rem 1rem;
+    padding: 4rem 1rem 2.2rem;
 }
 
-.main-container_selected-watch a {
-    text-decoration: none;
-}
+
 
 .main-container_selected-watch .container_selected-watch {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     overflow-X: scroll;
     text-align: center;
+    margin-top: 8rem;
+}
+
+.selected-watch{
+    margin-right: 20px;
 }
 
 h1 {
     position: relative;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
 }
 
 h1::after {
     content: '';
-    width: 100%;
+    width: 7%;
     height: 1px;
     background-color: #33312F;
     position: absolute;
-    bottom: -2rem;
-    left: 0;
-}
-
-.container_selected-watch .selected-watch {
-    margin: 6.6rem 1rem 0 1.8rem;
-    padding: 1rem;
-    border: #D1D1D1 1px solid;
+    bottom: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .container_selected-watch .selected-watch h3{
@@ -187,24 +188,46 @@ h1::after {
 .img-container{
     display: inline-block;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .img-container img{
-    transition: all 3s;
+transition: all 3s;
+   display: block;
+   border-radius: 7px;
+}
+
+input[type="radio"]:checked+label{
+    background-image: linear-gradient(to right bottom, #0b0b0b, #191919, #242424, #303030, #3d3d3d);;
+    color: #FBFBFB;
+}
+
+input[type="radio"]:checked+label .img-container img{
+    transform: scale(1.2);
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+label{
     display: block;
-}
-
-.selected-watch:hover img{
-    transform: scale(1.1);
-}
-
-.container_selected-watch a {
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    border-radius: 7px;
+    border: #37332da0 2px solid;
     color: #33312F;
+    transition: 400ms;
+    cursor: pointer; 
+    background-color: #F5F5F5;
+
 }
 
-.container_selected-watch .selected-watch img {
-    margin-bottom: 20px;
-    transition: 1s;
+label:hover{
+    background-image: linear-gradient(to right bottom, #0b0b0b, #191919, #242424, #303030, #3d3d3d);;
+    color: #FBFBFB;
+    transition: all 400ms;
 }
 
 /* ------------------------------ */
@@ -318,7 +341,7 @@ h4 {
 /* ------------------------------ */
 /* section selected watch */
 footer {
-    background-color: #33312F;
+    background-image: linear-gradient(to right bottom, #0b0b0b, #191919, #242424, #303030, #3d3d3d);
     text-align: center;
     padding: 3rem 1rem;
     margin-top: 1.5rem;
@@ -414,7 +437,6 @@ footer .legal-mentions a {
     display: none;
     z-index: 2;
 }
-
 .modaleBackgroundActive{
     display: block;
 }
@@ -431,34 +453,10 @@ footer .legal-mentions a {
 
 .containerBasketActive {
     right: 0;
-}
+ }
 
 .bodyActive {
     overflow: hidden;
-}
-
-/* .containerBasketOff {
-    animation : basketclose 1s forwards;
-} */
-
-@keyframes basketclose {
-    0% {
-        right:0;
-    } 100%{
-        right: -60%;
-    }
-}
-
-.containerBasketActive {
-    animation : basketopen 1s forwards;
-}
-
-@keyframes basketopen {
-    0% {
-        right:-60%;
-    } 100%{
-        right: 0;
-    }
 }
 
 .bodyActive {
@@ -513,7 +511,7 @@ footer .legal-mentions a {
 .containerItems{
     border-bottom:1px solid #33312F;
     overflow-y: scroll;
-    height: calc(60vh - 101px);
+    height: calc(55vh - 101px);
 }
 
 .cartProductCard {

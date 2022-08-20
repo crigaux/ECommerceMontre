@@ -55,8 +55,8 @@ function addOneProduct() {
             let quantity = JSON.parse(localStorage.getItem(btn.dataset.id));
             increaseQuantity(btn.dataset.id);
             quantity = JSON.parse(localStorage.getItem(btn.dataset.id));
-            document.querySelector('.increase[data-id ="'+ btn.dataset.id +'"] + div').innerHTML = quantity.quantity;
-            document.querySelector('span[data-id ="'+ btn.dataset.id +'"]').innerHTML = quantity.price * quantity.quantity + '€';
+            document.querySelector('.increase[data-id ="' + btn.dataset.id + '"] + div').innerHTML = quantity.quantity;
+            document.querySelector('span[data-id ="' + btn.dataset.id + '"]').innerHTML = quantity.price * quantity.quantity + '€';
             calculCartPrice();
         })
     })
@@ -72,10 +72,11 @@ function substractOneProduct() {
             } else {
                 decreaseQuantity(btn.dataset.id);
                 quantity = JSON.parse(localStorage.getItem(btn.dataset.id));
-                document.querySelector('.increase[data-id ="'+ btn.dataset.id +'"] + div').innerHTML = quantity.quantity;
-                document.querySelector('span[data-id ="'+ btn.dataset.id +'"]').innerHTML = quantity.price * quantity.quantity + '€';
+                document.querySelector('.increase[data-id ="' + btn.dataset.id + '"] + div').innerHTML = quantity.quantity;
+                document.querySelector('span[data-id ="' + btn.dataset.id + '"]').innerHTML = quantity.price * quantity.quantity + '€';
             }
             calculCartPrice();
+            containerItemsIsEmpty();
         })
     })
 }
@@ -96,7 +97,7 @@ function displayCart() {
     for (i = 0; i < localStorage.length; i++) {
         product = JSON.parse(localStorage.getItem(localStorage.key(i)))
         containerItems.innerHTML +=
-        `
+            `
         <div class="cartProductCard" data-id="${product.id}">
             <div class="imgCart">
                 <img src="${product.image}">
@@ -140,13 +141,13 @@ fetch('/assets/js/stock.json')
         btnAddProduct.forEach((btn) => {
             let test = false;
             btn.addEventListener("click", (e) => {
-                if(localStorage.length == 0) {
+                if (localStorage.length == 0) {
                     addToCart(e, json.stock);
                     displayCart();
                     btnAddProduct = document.querySelectorAll(".btnAddProduct");
                     console.log("premier");
                 } else {
-                    for (let i = 0 ; i < localStorage.length ; i++) {
+                    for (let i = 0; i < localStorage.length; i++) {
                         let product = JSON.parse(localStorage.getItem(localStorage.key(i)));
                         if (btn.id == product.id) {
                             test = true;
@@ -157,8 +158,8 @@ fetch('/assets/js/stock.json')
                     let product = JSON.parse(localStorage.getItem(btn.id));
                     increaseQuantity(btn.id);
                     product = JSON.parse(localStorage.getItem(btn.id));
-                    document.querySelector('.increase[data-id ="'+ btn.id +'"] + div').innerHTML = product.quantity;
-                    document.querySelector('span[data-id ="'+ btn.id +'"]').innerHTML = product.price * product.quantity + '€';
+                    document.querySelector('.increase[data-id ="' + btn.id + '"] + div').innerHTML = product.quantity;
+                    document.querySelector('span[data-id ="' + btn.id + '"]').innerHTML = product.price * product.quantity + '€';
                     calculCartPrice();
                 } else {
                     addToCart(e, json.stock);
@@ -167,11 +168,12 @@ fetch('/assets/js/stock.json')
                     substractOneProduct();
                     deleteProduct();
                     calculCartPrice();
+
                 }
                 containerItemsIsEmpty();
             })
         })
-})
+    })
 
 const basket = document.querySelector(".container-basket");
 const btnCloseModale = document.querySelector(".btn-close-modale")
@@ -180,6 +182,7 @@ const emptyContainerItems = document.querySelector(".emptyContainerItems")
 
 
 // ------- Modale
+
 
 navShoppingCartBtn.addEventListener("click", () => {
     modaleOpen()
@@ -201,21 +204,44 @@ const modaleOpen = () => {
     basket.classList.toggle("containerBasketActive")
     modaleBackground.classList.toggle("modaleBackgroundActive")
 }
-
 // ------- Navbar
 
+const nav = document.querySelector(".nav");
 let lastScroll = 0;
 
-const nav = document.querySelector(".nav");
-
 window.addEventListener("scroll", () => {
-    if(window.scrollY < lastScroll){
+    if (window.scrollY < lastScroll) {
         nav.style.top = "0";
     } else {
         nav.style.top = "-100px";
     }
     lastScroll = window.scrollY
 })
+
+// Js tri items
+
+const selectedWatchRadio = document.querySelectorAll(".selectedWatchRadio")
+
+selectedWatchRadio.forEach(radio => {
+    radio.addEventListener("click", (e) => {
+        if (e.target.id == "selectedWatchClassic") {
+            selectedClassic.style.display = "block"
+            selectedLuxury.style.display = "none"
+            selectedConnected.style.display = "none"
+        }
+        if (e.target.id == "selectedWatchLuxury") {
+            selectedClassic.style.display = "none"
+            selectedLuxury.style.display = "block"
+            selectedConnected.style.display = "none"
+        }
+        if (e.target.id == "selectedWatchConnected") {
+            selectedClassic.style.display = "none"
+            selectedLuxury.style.display = "none"
+            selectedConnected.style.display = "block"
+        }
+    })
+});
+
 
 // Si le panier est vide
 
