@@ -92,6 +92,21 @@
         margin: 2rem 0;
     }
 
+    .navLogoLink::after {
+        left: 100%;
+        transform: translateX(35%);
+    }
+    .navLogoLink::before {
+        right: 100%;
+        transform: translateX(-35%);
+    }
+    .navLogoLink::before, .navLogoLink::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        background-color: #37332D;
+        width: 50%;
+    }
 
 /* ---------------- */
     /* Modale */
