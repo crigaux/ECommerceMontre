@@ -38,37 +38,31 @@
     <section class="main-container_selected-watch">
         <h1>Notre selection de montres</h1>
         <div class="container_selected-watch">
-            <div class="selected-watch">
-                <div class="img-container">
-                    <img src="./assets/img/classic-watch.jpg" alt="montre classic">
-                </div>
+            <a href="#scrollClassic" class="selected-watch">
+                <img src="./assets/img/classic-watch.jpg" alt="montre classic">
                 <h3>Classique</h3>
-            </div>
-            <div class="selected-watch">
-                <div class="img-container">
-                    <img src="./assets/img/luxe-watch.jpg" alt="montre de luxe">
-                </div>
-                <h3>Luxe</h3>
-            </div>
-            <div class="selected-watch">
-                <div class="img-container">
-                    <img src="./assets//img/connected-watch.jpg" alt="montre connectés">
-                </div>
+            </a>
+            <a href="#scrollLuxe" class="selected-watch">
+                <img src="./assets/img/luxe-watch.jpg" alt="montre de luxe">
+                    <h3>Luxe</h3>
+            </a>
+            <a href="#scrollConnected" class="selected-watch">
+                <img src="./assets//img/connected-watch.jpg" alt="montre connectés">
                 <h3>Connectés</h3>
-            </div>
+            </a>
         </div>
     </section>
 
     <section class="productsContainer">
-        <div class="classic">
+        <div class="classic" id="scrollClassic">
             <h2>Nos montres classiques</h2>
         </div>
         <section id="classic"></section>
-        <div class="luxe">
+        <div class="luxe" id="scrollLuxe">
             <h2>Nos montres luxe</h2>
         </div>
         <section id="luxe"></section>
-        <div class="connected">
+        <div class="connected"  id="scrollConnected">
             <h2>Nos montres connectées</h2>
         </div>
         <section id="connected"></section>
@@ -107,7 +101,7 @@
                 <a href="#">Mentions légales</a>
             </div>
         </div>
-        <p>Copyright © 2022 Watches company All rights reserved.</p>
+        <p class="copyright">Copyright © 2022 Watches company All rights reserved.</p>
     </footer>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/cart.js"></script>

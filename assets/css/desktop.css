@@ -1,4 +1,4 @@
-@media screen and (min-width : 1200px ) {
+@media screen and (min-width : 900px ) {
 
     #navShoppingCartBtn{
         cursor: pointer;
@@ -30,6 +30,32 @@
 
     .classic, .luxe, .connected {
         height: 10rem;
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .classic::after,
+    .luxe::after,
+    .connected::after {
+        left: 20%;
+        transform: translateX(-100%);
+    }
+
+    .classic::before,
+    .luxe::before,
+    .connected::before {
+        right: 20%;
+        transform: translateX(100%);
+    }
+
+    .classic::before, .classic::after,
+    .luxe::before, .luxe::after,
+    .connected::before, .connected::after {
+        position: absolute;
+        height: 1px;
+        content: "";
+        background-color: black;
+        width: 20%;
     }
 
     h2 {
@@ -54,7 +80,7 @@
     }
 
     footer {
-        padding: 4.6rem 3rem;
+        padding: 3rem 3rem;
     }
 
     footer a:hover {
@@ -66,6 +92,10 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 10rem;
+    }
+
+    footer p {
+        margin-bottom: 0;
     }
 
     footer .top-container_footer p {

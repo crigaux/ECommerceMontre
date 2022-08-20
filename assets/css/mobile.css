@@ -117,6 +117,10 @@ a img {
     padding: 4.6rem 1rem;
 }
 
+.main-container_selected-watch a {
+    text-decoration: none;
+}
+
 .main-container_selected-watch .container_selected-watch {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -163,6 +167,15 @@ h1::after {
     transform: scale(1.1);
 }
 
+.container_selected-watch a {
+    color: #33312F;
+}
+
+.container_selected-watch .selected-watch img {
+    margin-bottom: 20px;
+    transition: 1s;
+}
+
 /* ------------------------------ */
 
 #classic,
@@ -203,6 +216,7 @@ h1::after {
 
 .productsContainer h2 {
     width: 100%;
+    text-align: center;
 }
 
 .productCard {
@@ -308,7 +322,14 @@ footer .container_social-network a {
     justify-content: center;
     align-items: center;
     border: 1px solid #A7A5A5;
-    border-radius: 100%;
+    border-radius: 20%;
+    transition: 300ms;
+}
+
+
+
+footer .container_social-network a svg {
+    transition: 300ms;
 }
 
 footer .container_social-network a:hover {
@@ -317,6 +338,7 @@ footer .container_social-network a:hover {
 
 footer a:hover {
     color: #FBFBFB;
+    transition: 300ms;
 }
 
 footer hr {
@@ -334,8 +356,8 @@ footer .credits {
     margin: 1rem 0;
 }
 
-footer .credits p {
-    margin-top: 1rem;
+.copyright {
+    font-size: 0.8rem;
 }
 
 footer .legal-mentions {
@@ -346,6 +368,7 @@ footer .legal-mentions {
 
 footer .legal-mentions a {
     margin-bottom: 5px;
+    font-size: 0.8rem;
 }
 
 
