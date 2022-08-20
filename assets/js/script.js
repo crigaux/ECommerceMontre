@@ -8,14 +8,14 @@ let product;
 function createProductCard(product) {
     document.getElementById(product.type).innerHTML +=
         `<div class="productCard">
-        <div class="productImg">
-            <img src="${product.image}" alt="Nom de la montre : ${product.title}">
-        </div>
-        <h4>${product.title}</h4>
-        <p class="productPrice">${product.price}€</p>
-        <p class="productDesc">${product.desc}</p>
-        <button class="btnAddProduct" id="${product.id}">ajouter au panier</button>
-    </div>`
+            <div class="productImg">
+                <img src="${product.image}" alt="Nom de la montre : ${product.title}">
+            </div>
+            <h4>${product.title}</h4>
+            <p class="productPrice">${product.price}€</p>
+            <p class="productDesc">${product.desc}</p>
+            <button class="btnAddProduct" id="${product.id}">ajouter au panier</button>
+        </div>`
 }
 function calculCartPrice() {
     let sum = 0;
@@ -83,7 +83,7 @@ function deleteProduct() {
     document.querySelectorAll('.delete-product').forEach(btn => {
         btn.addEventListener('click', () => {
             localStorage.removeItem(btn.dataset.id);
-            document.querySelector('.cartProductCard[data-id ="' + btn.dataset.id + '"]').outerHTML = '';
+            document.querySelector('.cartProductCard[data-id="' + btn.dataset.id + '"]').outerHTML = '';
             calculCartPrice();
         })
     })
@@ -134,32 +134,41 @@ fetch('/assets/js/stock.json')
             createProductCard(element);
         });
 
-        const btnAddProduct = document.querySelectorAll(".btnAddProduct");
+        let btnAddProduct = document.querySelectorAll(".btnAddProduct");
         btnAddProduct.forEach((btn) => {
+            let test = false;
             btn.addEventListener("click", (e) => {
-                
                 if(localStorage.length == 0) {
                     addToCart(e, json.stock);
                     displayCart();
+                    btnAddProduct = document.querySelectorAll(".btnAddProduct");
+                    console.log("premier");
                 } else {
-                    for (i = 0; i < localStorage.length; i++) {
-                        product = JSON.parse(localStorage.getItem(localStorage.key(i)))
+                    for (let i = 0 ; i < localStorage.length ; i++) {
+                        let product = JSON.parse(localStorage.getItem(localStorage.key(i)));
                         if (btn.id == product.id) {
-                            increaseQuantity(btn.id);
-                            displayCart();
-                        } else {
-                            addToCart(e, json.stock);
-                            displayCart();
+                            test = true;
                         }
                     }
                 }
-                addOneProduct();
-                substractOneProduct();
-                deleteProduct();
-                calculCartPrice();
+                if (test == true) {
+                    let product = JSON.parse(localStorage.getItem(btn.id));
+                    increaseQuantity(btn.id);
+                    product = JSON.parse(localStorage.getItem(btn.id));
+                    document.querySelector('.increase[data-id ="'+ btn.id +'"] + div').innerHTML = product.quantity;
+                    document.querySelector('span[data-id ="'+ btn.id +'"]').innerHTML = product.price * product.quantity + '€';
+                    calculCartPrice();
+                } else {
+                    addToCart(e, json.stock);
+                    displayCart();
+                    addOneProduct();
+                    substractOneProduct();
+                    deleteProduct();
+                    calculCartPrice();
+                }
             })
         })
-    })
+})
 
 // ouverture / fermeture de la modale panier
 
