@@ -505,7 +505,7 @@ footer .legal-mentions a {
 }
 
 .cartProductCard h4 {
-   padding: 0;
+    padding: 0;
     text-align:start;
     font-size: 1.2rem;
     margin-bottom: 10px;
@@ -560,6 +560,27 @@ transition: 300ms;
     margin: 20px auto;
     padding: 20px 0;
     max-width: 25rem;
+}
+
+.totalCartPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.totalCartPrice div div:nth-child(1) {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.totalCartPrice > div:nth-child(2){
+    justify-self: flex-end;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-left: 5px;
 }
 
 #continueShopping{

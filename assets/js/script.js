@@ -17,6 +17,13 @@ function createProductCard(product) {
         <button class="btnAddProduct" id="${product.id}">ajouter au panier</button>
     </div>`
 }
+function calculCartPrice() {
+    let sum = 0;
+    document.querySelectorAll('.cartProductCard span:nth-child(3)').forEach(price => {
+        sum += parseInt(price.innerHTML);
+    })
+    document.querySelector('.totalCartPrice').innerHTML = '<div><div>TOTAL</div><div>(hors frais de livraison)</div></div><div>' + sum + '€</div>';
+}
 
 const addToCart = (e, stock) => {
     stock.forEach((elem) => {
@@ -24,31 +31,32 @@ const addToCart = (e, stock) => {
             localStorage.setItem(elem.id, JSON.stringify(elem));
         }
     })
+    calculCartPrice();
 }
 
 function increaseQuantity(id) {
     let product = JSON.parse(localStorage.getItem(id));
     product.quantity++;
     localStorage.setItem(id, JSON.stringify(product));
+    calculCartPrice();
 }
 
 function decreaseQuantity(id) {
     let product = JSON.parse(localStorage.getItem(id));
-    if (product.quantity == 1) {
-        localStorage.removeItem(id);
-    } else {
-        product.quantity--;
-        localStorage.setItem(id, JSON.stringify(product));
-    }
+    product.quantity--;
+    localStorage.setItem(id, JSON.stringify(product));
+    calculCartPrice();
 }
 
 function addOneProduct() {
     document.querySelectorAll('.increase').forEach(btn => {
         btn.addEventListener('click', () => {
-            increaseQuantity(btn.dataset.id);
             let quantity = JSON.parse(localStorage.getItem(btn.dataset.id));
+            increaseQuantity(btn.dataset.id);
+            quantity = JSON.parse(localStorage.getItem(btn.dataset.id));
             document.querySelector('.increase[data-id ="'+ btn.dataset.id +'"] + div').innerHTML = quantity.quantity;
             document.querySelector('span[data-id ="'+ btn.dataset.id +'"]').innerHTML = quantity.price * quantity.quantity + '€';
+            calculCartPrice();
         })
     })
 }
@@ -56,10 +64,17 @@ function addOneProduct() {
 function substractOneProduct() {
     document.querySelectorAll('.decrease').forEach(btn => {
         btn.addEventListener('click', () => {
-            decreaseQuantity(btn.dataset.id);
             let quantity = JSON.parse(localStorage.getItem(btn.dataset.id));
-            document.querySelector('.increase[data-id ="'+ btn.dataset.id +'"] + div').innerHTML = quantity.quantity;
-            document.querySelector('span[data-id ="'+ btn.dataset.id +'"]').innerHTML = quantity.price * quantity.quantity + '€';
+            if (quantity.quantity == 1) {
+                localStorage.removeItem(btn.dataset.id);
+                document.querySelector('.cartProductCard[data-id ="' + btn.dataset.id + '"]').outerHTML = '';
+            } else {
+                decreaseQuantity(btn.dataset.id);
+                quantity = JSON.parse(localStorage.getItem(btn.dataset.id));
+                document.querySelector('.increase[data-id ="'+ btn.dataset.id +'"] + div').innerHTML = quantity.quantity;
+                document.querySelector('span[data-id ="'+ btn.dataset.id +'"]').innerHTML = quantity.price * quantity.quantity + '€';
+            }
+            calculCartPrice();
         })
     })
 }
@@ -69,6 +84,7 @@ function deleteProduct() {
         btn.addEventListener('click', () => {
             localStorage.removeItem(btn.dataset.id);
             document.querySelector('.cartProductCard[data-id ="' + btn.dataset.id + '"]').outerHTML = '';
+            calculCartPrice();
         })
     })
 }
@@ -107,6 +123,7 @@ displayCart();
 addOneProduct();
 substractOneProduct();
 deleteProduct();
+calculCartPrice();
 
 fetch('/assets/js/stock.json')
     .then(function (response) {
@@ -139,6 +156,7 @@ fetch('/assets/js/stock.json')
                 addOneProduct();
                 substractOneProduct();
                 deleteProduct();
+                calculCartPrice();
             })
         })
     })
