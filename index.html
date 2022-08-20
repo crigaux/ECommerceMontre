@@ -14,17 +14,26 @@
 </head>
 
 <body>
+    <div class="modale-background">
+        <div class="container-basket">
+            <div class="title-basket">
+                <h5>Votre panier</h5>
+                <button class="btn-close-modale"><i class="cross fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="containerItems">
+            </div>
+            <button class="btn-modale" id="btnCheckout">Accéder au paiement</button>
+            <button class="btn-modale" id="continueShopping">Poursuivre vos achats</button>
+        </div>
+    </div>
     <nav>
         <div class="navInfo">
-            
         </div>
         <!-- on logo img , add HREF with id link to the top of page -->
-        <a href="" class="navLogoLink"><img class="navLogo" src="./assets/img/logo_watchies.svg" href="#" /></a>
-        <button id="navShoppingCartBtn" href='#final'><i class="fa-solid fa-cart-shopping"></i></button>
+        <a href="#" class="navLogoLink"><img class="navLogo" src="./assets/img/logo_watchies.svg" href="#" /></a>
+        <button id="navShoppingCartBtn" href='#'><i class="fa-solid fa-cart-shopping"></i></button>
     </nav>
-
     <section class="heroBanner">
-        
     </section>
 
     <!-- Selection de montres -->
@@ -32,21 +41,24 @@
         <h1>Notre selection de montres</h1>
         <div class="container_selected-watch">
             <div class="selected-watch">
-                <div class="watch-zoom">
+                <div class="img-container">
                     <img src="./assets/img/classic-watch.jpg" alt="montre classic">
-                    <h3>Classique</h3>
-                    </img>
                 </div>
+                <h3>Classique</h3>
+
             </div>
             <div class="selected-watch">
-                <img src="./assets/img/luxe-watch.jpg" alt="montre de luxe">
+                <div class="img-container">
+                    <img src="./assets/img/luxe-watch.jpg" alt="montre de luxe">
+                </div>
                 <h3>Luxe</h3>
-                </img>
             </div>
             <div class="selected-watch">
-                <img src="./assets//img/connected-watch.jpg" alt="montre connectés">
+                <div class="img-container">
+                    <img src="./assets//img/connected-watch.jpg" alt="montre connectés">
+                </div>
                 <h3>Connectés</h3>
-                </img>
+
             </div>
         </div>
     </section>
@@ -94,7 +106,7 @@
                     <img src="./assets/img/logo_watchies-footer.svg" alt="logo du shop">
                 </a>
             </div>
-            <div class="mentions-légales">
+            <div class="legal-mentions">
                 <a href="#">Conditions générales de vente</a>
                 <a href="#">Mentions légales</a>
             </div>
@@ -102,6 +114,7 @@
         <p>Copyright © 2022 Watches company All rights reserved.</p>
     </footer>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/cart.js"></script>
 </body>
 
 </html>
