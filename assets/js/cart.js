@@ -4,28 +4,28 @@
 
 // ------- Modale
 
-const modale = document.querySelector(".modale-background");
-const basket = document.querySelector(".container-basket");
-const btnCloseModale = document.querySelector(".btn-close-modale")
-const backgroundModale = document.querySelector(".modale-background")
+// const modale = document.querySelector(".modale-background");
+// const basket = document.querySelector(".container-basket");
+// const btnCloseModale = document.querySelector(".btn-close-modale")
+// const backgroundModale = document.querySelector(".modale-background")
 
-navShoppingCartBtn.addEventListener("click", () => {
-    modaleOpen()
-})
+// navShoppingCartBtn.addEventListener("click", () => {
+//     modaleOpen()
+// })
 
-continueShopping.addEventListener("click", () => {
-    modaleOpen()
-})
+// continueShopping.addEventListener("click", () => {
+//     modaleOpen()
+// })
 
-btnCloseModale.addEventListener("click", () => {
-    modaleOpen()
-})
+// btnCloseModale.addEventListener("click", () => {
+//     modaleOpen()
+// })
 
-const modaleOpen = () => {
-    modale.classList.toggle("modaleActive")
-    document.body.classList.toggle("bodyActive")
-    basket.classList.toggle("containerBasketActive")
-}
+// const modaleOpen = () => {
+//     modale.classList.toggle("modaleActive")
+//     document.body.classList.toggle("bodyActive")
+//     basket.classList.toggle("containerBasketActive")
+// }
 
 
 // Ajout de la classe "overlayOut" et supression de la classe "overlayIn" à l'overlay du panier au clic sur la croix ou en dehors du panier
