@@ -8,25 +8,30 @@
     <script src="https://kit.fontawesome.com/7194bdd5cb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/css/mobile.css">
     <link rel="stylesheet" href="./assets/css/desktop.css">
+    <link rel="icon" href="./assets/img/favicon_watchies.png">
     <title>Watchies</title>
 </head>
 
 <body>
     <div class="modale-background">
-        <div class="container-basket">
-            <div class="title-basket">
-                <h5>Votre panier</h5>
-                <button class="btn-close-modale"><i class="cross fa-solid fa-xmark"></i></button>
-            </div>
-            <div class="containerItems">
-            </div>
-            <div class="totalCartPrice"></div>
-            <button class="btn-modale" id="btnCheckout">Accéder au paiement</button>
-            <button class="btn-modale" id="continueShopping">Poursuivre vos achats</button>
-        </div>
     </div>
+    <div class="container-basket">
+        <div class="title-basket">
+            <h5>Votre panier</h5>
+            <button class="btn-close-modale"><i class="cross fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="emptyContainerItems">
+            <p>Votre panier est vide</p>
+        </div>
+        <div class="containerItems">
+        </div>
+        <div class="totalCartPrice"></div>
+        <button class="btn-modale" id="btnCheckout">Accéder au paiement</button>
+        <button class="btn-modale" id="continueShopping">Poursuivre vos achats</button>
+    </div>
+    
 
-    <nav>
+    <nav class="nav">
         <div class="navInfo">
         </div>
         <!-- on logo img , add HREF with id link to the top of page -->
@@ -35,10 +40,13 @@
     </nav>
 
     <section class="heroBanner">
+        <video autoplay muted loop preload="auto" src="./assets/img/video-herobanner.mp4">
+        </video>
+        <a href="#section-selectedwatch"><i class="fa-solid fa-angle-down"></i></a>
     </section>
 
     <!-- Selection de montres -->
-    <section class="main-container_selected-watch">
+    <section id="section-selectedwatch" class="main-container_selected-watch">
         <h1>Notre selection de montres</h1>
         <div class="container_selected-watch">
             <a href="#scrollClassic" class="selected-watch">

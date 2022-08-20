@@ -17,6 +17,7 @@ function createProductCard(product) {
             <button class="btnAddProduct" id="${product.id}">ajouter au panier</button>
         </div>`
 }
+
 function calculCartPrice() {
     let sum = 0;
     document.querySelectorAll('.cartProductCard span:nth-child(3)').forEach(price => {
@@ -165,17 +166,19 @@ fetch('/assets/js/stock.json')
                     substractOneProduct();
                     deleteProduct();
                     calculCartPrice();
+                    containerItemsIsEmpty();
                 }
             })
         })
 })
 
-// ouverture / fermeture de la modale panier
-
-const modale = document.querySelector(".modale-background");
 const basket = document.querySelector(".container-basket");
 const btnCloseModale = document.querySelector(".btn-close-modale")
-const backgroundModale = document.querySelector(".modale-background")
+const modaleBackground = document.querySelector(".modale-background")
+const emptyContainerItems = document.querySelector(".emptyContainerItems")
+
+
+// ------- Modale
 
 navShoppingCartBtn.addEventListener("click", () => {
     modaleOpen()
@@ -188,16 +191,43 @@ continueShopping.addEventListener("click", () => {
 btnCloseModale.addEventListener("click", () => {
     modaleOpen()
 })
+modaleBackground.addEventListener("click", () => {
+    modaleOpen()
+})
 
 const modaleOpen = () => {
-    modale.classList.toggle("modaleActive")
     document.body.classList.toggle("bodyActive")
     basket.classList.toggle("containerBasketActive")
+    modaleBackground.classList.toggle("modaleBackgroundActive")
 }
-// =======
-// .then(function(json) {
-//     json.stock.forEach(element => {
-//         createProductCard(element);
-//     });
-// });
-// >>>>>>> ancreCat
+
+// ------- Navbar
+
+let lastScroll = 0;
+
+const nav = document.querySelector(".nav");
+
+window.addEventListener("scroll", () => {
+    if(window.scrollY < lastScroll){
+        nav.style.top = "0";
+    } else {
+        nav.style.top = "-100px";
+    }
+    lastScroll = window.scrollY
+})
+
+// Si le panier est vide
+
+const containerItemsIsEmpty = () => {
+    if (containerItems.childElementCount === 0) {
+        emptyContainerItems.style.display = "block"
+        btnCheckout.style.display = "none"
+    } else {
+        emptyContainerItems.style.display = "none"
+        btnCheckout.style.display = "block"
+    }
+}
+
+window.addEventListener("load", () => {
+    containerItemsIsEmpty()
+})

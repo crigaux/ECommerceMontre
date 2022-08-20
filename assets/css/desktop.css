@@ -141,6 +141,18 @@
 /* ---------------- */
     /* Modale */
     .container-basket {
-        width: 40vw;
+        width: 30vw;
+        right: -40%;
+    }
+
+    .containerBasketActive {
+        right: 0;
+    }
+}
+
+@media(min-width: 600px){
+
+    nav{
+        justify-content:center;
     }
 }
