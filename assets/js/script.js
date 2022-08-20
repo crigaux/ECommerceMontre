@@ -86,6 +86,7 @@ function deleteProduct() {
             localStorage.removeItem(btn.dataset.id);
             document.querySelector('.cartProductCard[data-id="' + btn.dataset.id + '"]').outerHTML = '';
             calculCartPrice();
+            containerItemsIsEmpty();
         })
     })
 }
@@ -166,8 +167,8 @@ fetch('/assets/js/stock.json')
                     substractOneProduct();
                     deleteProduct();
                     calculCartPrice();
-                    containerItemsIsEmpty();
                 }
+                containerItemsIsEmpty();
             })
         })
 })
