@@ -121,7 +121,7 @@
         {
             "id": 6,
             "type": "luxe",
-            "title": "Piaget Polo Squelette",
+            "title": "Piaget Squelette",
             "image": "./assets/img/img6.png",
             "desc": "Boîtier en or rose 750/1000. Fond saphir. Mouvement mécanique squelette extra-plat Manufacture Piaget 1200S1 à remontage automatique.",
             "price": 46200,
@@ -130,7 +130,7 @@
         {
             "id": 7,
             "type": "luxe",
-            "title": "Polo Emperador Squelette",
+            "title": "Polo Emperador",
             "image": "./assets/img/img7.png",
             "desc": "Boîtier en or blanc 750/1000 serti de 649 diamants taille brillant, de 92 diamants taille baguette et de 44 saphirs.",
             "price": 36000,
@@ -166,7 +166,7 @@
         {
             "id": 23,
             "type": "luxe",
-            "title": "Piaget Emperador Coussin",
+            "title": "Piaget Coussin",
             "image": "./assets/img/img23.png",
             "desc": "Boîtier en or rose 750/1000 serti de 136 diamants taille brillant. Cadran en nacre blanche avec index en or rose, serti de 164 diamants taille brillant.",
             "price": 78000,
@@ -175,7 +175,7 @@
         {
             "id": 24,
             "type": "luxe",
-            "title": "Piaget Emperador Coussin",
+            "title": "Piaget Emperador",
             "image": "./assets/img/img24.png",
             "desc": "Boîtier en or blanc 750/1000 serti de 136 diamants taille brillant. Cadran en or blanc serti de 164 diamants taille brillant.",
             "price": 79500,
@@ -184,7 +184,7 @@
         {
             "id": 25,
             "type": "luxe",
-            "title": "Gouverneur Quantième Perpétuel",
+            "title": "Gouverneur Perpétuel",
             "image": "./assets/img/img25.png",
             "desc": "Boîtier en or blanc 750/1000 serti de 128 diamants taille brillant. Cadran guilloché avec compteurs surligné de filets d'or blanc. Fond saphir.",
             "price": 77000,
@@ -193,7 +193,7 @@
         {
             "id": 26,
             "type": "luxe",
-            "title": "Gouverneur Quantième Perpétuel",
+            "title": "Gouverneur Quantième",
             "image": "./assets/img/img26.png",
             "desc": "Boîtier en or rose. Cadran guilloché avec compteurs surligné de filets d'or rose. Fond saphir. Mouvement mécanique extra-plat.",
             "price": 60000,
@@ -202,7 +202,7 @@
         {
             "id": 27,
             "type": "luxe",
-            "title": "Altiplano Ultimate Automatic",
+            "title": "Altiplano Automatic",
             "image": "./assets/img/img27.png",
             "desc": "Boîtier en or rose serti de 90 diamants taille brillant. Mouvement mécanique automatique extra-plat.",
             "price": 41800,
@@ -211,7 +211,7 @@
         {
             "id": 28,
             "type": "luxe",
-            "title": "Altiplano Ultimate Automatic",
+            "title": "Altiplano Ultimate",
             "image": "./assets/img/img28.png",
             "desc": "Boîtier en or blanc 750/1000. L’une des montres à remontage automatique les plus plates au monde : 4,30 mm d’épaisseur.",
             "price": 33000,
@@ -221,7 +221,7 @@
         {
             "id": 9,
             "type": "connected",
-            "title": "Hybrid Smartwatch HR",
+            "title": "Hybrid HR",
             "image": "./assets/img/img9.png",
             "desc": "Les montres connectées Skagen fonctionnent avec les téléphones exécutant la dernière version d'Android ou d'iOS.",
             "price": 3500,
@@ -230,7 +230,7 @@
         {
             "id": 10,
             "type": "connected",
-            "title": "Falster Gen 6 Rose Gold",
+            "title": "Falster Rose Gold",
             "image": "./assets/img/img10.png",
             "desc": "Wear OS by Google fonctionne avec les téléphones exécutant la dernière version d'Android™ ou iOS.",
             "price": 2200,
@@ -239,7 +239,7 @@
         {
             "id": 11,
             "type": "connected",
-            "title": "Falster Gen 6 Midnight",
+            "title": "Falster Midnight",
             "image": "./assets/img/img11.png",
             "desc": "Wear OS by Google fonctionne avec les téléphones exécutant la dernière version d'Android™ ou iOS.",
             "price": 2500,
@@ -293,7 +293,7 @@
         {
             "id": 33,
             "type": "connected",
-            "title": "Jorn Gray Steel Mesh",
+            "title": "Jorn Gray",
             "image": "./assets/img/img33.png",
             "desc": "Wear OS by Google fonctionne avec les téléphones exécutant la dernière version d'Android™ ou iOS.",
             "price": 4000,
@@ -302,7 +302,7 @@
         {
             "id": 34,
             "type": "connected",
-            "title": "Jorn Rose-Tone Steel Mesh",
+            "title": "Jorn Rose-Tone",
             "image": "./assets/img/img34.png",
             "desc": "Les montres connectées Skagen fonctionnent avec les téléphones exécutant la dernière version d'Android ou d'iOS.",
             "price": 4200,
@@ -311,7 +311,7 @@
         {
             "id": 35,
             "type": "connected",
-            "title": "Charcoal Stainless Steel",
+            "title": "Charcoal Stainless",
             "image": "./assets/img/img35.png",
             "desc": "Wear OS by Google fonctionne avec les téléphones exécutant la dernière version d'Android™ ou iOS.",
             "price": 3000,
@@ -320,7 +320,7 @@
         {
             "id": 36,
             "type": "connected",
-            "title": "Silver Stainless Steel",
+            "title": "Silver Stainless",
             "image": "./assets/img/img36.png",
             "desc": "Conçu avec le look moderne d'une montre traditionnelle, équipé des caractéristiques fonctionnelles d'une montre intelligente.",
             "price": 3500,
