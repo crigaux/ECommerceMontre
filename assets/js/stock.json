@@ -36,6 +36,78 @@
             "price": 21000,
             "quantity": 1
         },
+        {
+            "id": 13,
+            "type": "classic",
+            "title": "Polo Date",
+            "image": "./assets/img/img13.png",
+            "desc": "Boîtier en or rose. Cadran à décor guilloché vert avec index luminescents. Fond en verre saphir. ",
+            "price": 29400,
+            "quantity": 1
+        },
+        {
+            "id": 14,
+            "type": "classic",
+            "title": "Inspiration Vintage",
+            "image": "./assets/img/img14.png",
+            "desc": "Montre Piaget Vintage Inspiration. Boîtier en or rose 750/1000. Cadran avec index en or rose.",
+            "price": 33000,
+            "quantity": 1
+        },
+        {
+            "id": 15,
+            "type": "classic",
+            "title": "Inspiration Vintage",
+            "image": "./assets/img/img15.png",
+            "desc": "Montre Piaget Vintage Inspiration. Boîtier en or rose 750/1000. Cadran en lapis-lazuli naturel.",
+            "price": 33000,
+            "quantity": 1
+        },
+        {
+            "id": 16,
+            "type": "classic",
+            "title": "Altiplano",
+            "image": "./assets/img/img16.png",
+            "desc": "Cadran avec index en or rhodié. Fond saphir. Bracelet interchangeable.",
+            "price": 25400,
+            "quantity": 1
+        },
+        {
+            "id": 17,
+            "type": "classic",
+            "title": "Piaget Polo Date",
+            "image": "./assets/img/img17.png",
+            "desc": "Boîtier en acier. Fond en verre saphir. Bracelet en caoutchouc interchangeable.",
+            "price": 11400,
+            "quantity": 1
+        },
+        {
+            "id": 18,
+            "type": "classic",
+            "title": "Piaget Polo Date",
+            "image": "./assets/img/img18.png",
+            "desc": "Boîtier en acier. Cadran avec index luminescents. Fond saphir. Mouvement mécanique Manufacture Piaget.",
+            "price": 11400,
+            "quantity": 1
+        },
+        {
+            "id": 19,
+            "type": "classic",
+            "title": "Altiplano",
+            "image": "./assets/img/img19.png",
+            "desc": "Cadran en lapis-lazuli naturel. Mouvement mécanique extra-plat Manufacture Piaget.",
+            "price": 25500,
+            "quantity": 1
+        },
+        {
+            "id": 20,
+            "type": "classic",
+            "title": "Altiplano Origin",
+            "image": "./assets/img/img20.png",
+            "desc": "Boîtier en or rose 750/1000. Mouvement mécanique extra-plat Manufacture Piaget.",
+            "price": 17100,
+            "quantity": 1
+        },
 
         {
             "id": 5,
