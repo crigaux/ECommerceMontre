@@ -9,7 +9,7 @@
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
     .main-container_selected-watch .container_selected-watch {
@@ -31,7 +31,7 @@
     .classic, .luxe, .connected {
         height: 10rem;
         width: 60%;
-        margin-left: 20%;
+        margin: 0 auto;
     }
 
     .classic::after,
@@ -76,11 +76,11 @@
     }
 
     .productsContainer h2 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     footer {
-        padding: 3rem 3rem;
+        padding: 3rem;
     }
 
     footer a:hover {
@@ -111,7 +111,7 @@
     }
 
     footer hr {
-        width: 90%;
+        width: 82%;
     }
 
     footer .bottom-container_footer img {
@@ -148,11 +148,11 @@
     .containerBasketActive {
         right: 0;
     }
-}
 
 @media(min-width: 600px){
 
     nav{
         justify-content:center;
     }
+}
 }
