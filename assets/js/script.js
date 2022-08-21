@@ -145,7 +145,6 @@ fetch('/assets/js/stock.json')
                     addToCart(e, json.stock);
                     displayCart();
                     btnAddProduct = document.querySelectorAll(".btnAddProduct");
-                    console.log("premier");
                 } else {
                     for (let i = 0; i < localStorage.length; i++) {
                         let product = JSON.parse(localStorage.getItem(localStorage.key(i)));

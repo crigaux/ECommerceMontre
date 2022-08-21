@@ -145,6 +145,78 @@
             "price": 29200,
             "quantity": 1
         },
+        {
+            "id": 21,
+            "type": "luxe",
+            "title": "Altiplano Tradition",
+            "image": "./assets/img/img21.png",
+            "desc": "Boîtier en or blanc serti de 52 diamants taille brillant. Cadran serti de 492 diamants taille brillant avec index sertis de 12 saphirs.",
+            "price": 82500,
+            "quantity": 1
+        },
+        {
+            "id": 22,
+            "type": "luxe",
+            "title": "Altiplano Origin",
+            "image": "./assets/img/img22.png",
+            "desc": "Cadran laqué bleu avec index en or blanc, serti de 4 diamants taille baguette. Boucle sertie de 23 diamants taille brillant. Fond saphir.",
+            "price": 86500,
+            "quantity": 1
+        },
+        {
+            "id": 23,
+            "type": "luxe",
+            "title": "Piaget Emperador Coussin",
+            "image": "./assets/img/img23.png",
+            "desc": "Boîtier en or rose 750/1000 serti de 136 diamants taille brillant. Cadran en nacre blanche avec index en or rose, serti de 164 diamants taille brillant.",
+            "price": 78000,
+            "quantity": 1
+        },
+        {
+            "id": 24,
+            "type": "luxe",
+            "title": "Piaget Emperador Coussin",
+            "image": "./assets/img/img24.png",
+            "desc": "Boîtier en or blanc 750/1000 serti de 136 diamants taille brillant. Cadran en or blanc serti de 164 diamants taille brillant.",
+            "price": 79500,
+            "quantity": 1
+        },
+        {
+            "id": 25,
+            "type": "luxe",
+            "title": "Gouverneur Quantième Perpétuel",
+            "image": "./assets/img/img25.png",
+            "desc": "Boîtier en or blanc 750/1000 serti de 128 diamants taille brillant. Cadran guilloché avec compteurs surligné de filets d'or blanc. Fond saphir.",
+            "price": 77000,
+            "quantity": 1
+        },
+        {
+            "id": 26,
+            "type": "luxe",
+            "title": "Gouverneur Quantième Perpétuel",
+            "image": "./assets/img/img26.png",
+            "desc": "Boîtier en or rose. Cadran guilloché avec compteurs surligné de filets d'or rose. Fond saphir. Mouvement mécanique extra-plat.",
+            "price": 60000,
+            "quantity": 1
+        },
+        {
+            "id": 27,
+            "type": "luxe",
+            "title": "Altiplano Ultimate Automatic",
+            "image": "./assets/img/img27.png",
+            "desc": "Boîtier en or rose serti de 90 diamants taille brillant. Mouvement mécanique automatique extra-plat.",
+            "price": 41800,
+            "quantity": 1
+        },
+        {
+            "id": 28,
+            "type": "luxe",
+            "title": "Altiplano Ultimate Automatic",
+            "image": "./assets/img/img28.png",
+            "desc": "Boîtier en or blanc 750/1000. L’une des montres à remontage automatique les plus plates au monde : 4,30 mm d’épaisseur.",
+            "price": 33000,
+            "quantity": 1
+        },
 
         {
             "id": 9,
@@ -180,6 +252,78 @@
             "image": "./assets/img/img12.png",
             "desc": "Les montres connectées Skagen fonctionnent avec les téléphones exécutant la dernière version d'Android ou d'iOS.",
             "price": 2200,
+            "quantity": 1
+        },
+        {
+            "id": 29,
+            "type": "connected",
+            "title": "Jorn 42mm",
+            "image": "./assets/img/img29.png",
+            "desc": "Conçu avec le look moderne d'une montre traditionnelle, équipé des caractéristiques fonctionnelles d'une montre intelligente.",
+            "price": 2500,
+            "quantity": 1
+        },
+        {
+            "id": 30,
+            "type": "connected",
+            "title": "Falster Ocean Blue",
+            "image": "./assets/img/img30.png",
+            "desc": "Les montres connectées Skagen fonctionnent avec les téléphones exécutant la dernière version d'Android ou d'iOS.",
+            "price": 2700,
+            "quantity": 1
+        },
+        {
+            "id": 31,
+            "type": "connected",
+            "title": "Falster Espresso",
+            "image": "./assets/img/img31.png",
+            "desc": "Conçu avec le look moderne d'une montre traditionnelle, équipé des caractéristiques fonctionnelles d'une montre intelligente.",
+            "price": 3000,
+            "quantity": 1
+        },
+        {
+            "id": 32,
+            "type": "connected",
+            "title": "Jorn Black Leather",
+            "image": "./assets/img/img32.png",
+            "desc": "Les montres connectées Skagen fonctionnent avec les téléphones exécutant la dernière version d'Android ou d'iOS.",
+            "price": 3800,
+            "quantity": 1
+        },
+        {
+            "id": 33,
+            "type": "connected",
+            "title": "Jorn Gray Steel Mesh",
+            "image": "./assets/img/img33.png",
+            "desc": "Wear OS by Google fonctionne avec les téléphones exécutant la dernière version d'Android™ ou iOS.",
+            "price": 4000,
+            "quantity": 1
+        },
+        {
+            "id": 34,
+            "type": "connected",
+            "title": "Jorn Rose-Tone Steel Mesh",
+            "image": "./assets/img/img34.png",
+            "desc": "Les montres connectées Skagen fonctionnent avec les téléphones exécutant la dernière version d'Android ou d'iOS.",
+            "price": 4200,
+            "quantity": 1
+        },
+        {
+            "id": 35,
+            "type": "connected",
+            "title": "Charcoal Stainless Steel",
+            "image": "./assets/img/img35.png",
+            "desc": "Wear OS by Google fonctionne avec les téléphones exécutant la dernière version d'Android™ ou iOS.",
+            "price": 3000,
+            "quantity": 1
+        },
+        {
+            "id": 36,
+            "type": "connected",
+            "title": "Silver Stainless Steel",
+            "image": "./assets/img/img36.png",
+            "desc": "Conçu avec le look moderne d'une montre traditionnelle, équipé des caractéristiques fonctionnelles d'une montre intelligente.",
+            "price": 3500,
             "quantity": 1
         }
     ]
