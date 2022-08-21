@@ -258,3 +258,15 @@ const containerItemsIsEmpty = () => {
 window.addEventListener("load", () => {
     containerItemsIsEmpty()
 })
+
+document.querySelector('#classicBtnCat').addEventListener('click', () => {
+    document.querySelector('#jumpToClassic').scrollIntoView()
+})
+
+document.querySelector('#luxeBtnCat').addEventListener('click', () => {
+    document.querySelector('#jumpToLuxe').scrollIntoView()
+})
+
+document.querySelector('#connectedBtnCat').addEventListener('click', () => {
+    document.querySelector('#jumpToConnected').scrollIntoView()
+})

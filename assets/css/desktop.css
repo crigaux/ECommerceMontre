@@ -64,7 +64,8 @@
 
     #classic, #luxe, #connected {
         flex-direction: row;
-        margin: 0 2rem;
+        margin: 0 10% 1rem;
+        width: 80%;
     }
 
     .productCard {
