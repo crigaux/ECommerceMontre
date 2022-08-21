@@ -123,6 +123,10 @@
         margin: 2rem 0;
     }
 
+    footer .container_contact-footer a:nth-child(3) {
+        margin: 0.5rem 0 0.4rem 0;
+    }
+
     .navLogoLink::after {
         left: 100%;
         transform: translateX(35%);
