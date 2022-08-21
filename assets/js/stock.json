@@ -184,7 +184,7 @@
         {
             "id": 25,
             "type": "luxe",
-            "title": "Gouverneur Perpétuel",
+            "title": "Perpétuel",
             "image": "./assets/img/img25.png",
             "desc": "Boîtier en or blanc 750/1000 serti de 128 diamants taille brillant. Cadran guilloché avec compteurs surligné de filets d'or blanc. Fond saphir.",
             "price": 77000,
@@ -193,7 +193,7 @@
         {
             "id": 26,
             "type": "luxe",
-            "title": "Gouverneur Quantième",
+            "title": "Quantième",
             "image": "./assets/img/img26.png",
             "desc": "Boîtier en or rose. Cadran guilloché avec compteurs surligné de filets d'or rose. Fond saphir. Mouvement mécanique extra-plat.",
             "price": 60000,
