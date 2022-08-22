@@ -655,18 +655,18 @@ footer .legal-mentions a {
 }
 
 #continueShopping:hover {
-    background-color: #33312F;
+    background-image: linear-gradient(to right bottom, #0b0b0b, #191919, #242424, #303030, #3d3d3d);
     color: #FBFBFB;
     transition: 300ms;
 }
 
 #btnCheckout {
-    background-color: #33312F;
+    background-image: linear-gradient(to right bottom, #0b0b0b, #191919, #242424, #303030, #3d3d3d);
     color: #FBFBFB;
 }
 
 #btnCheckout:hover {
-    background-color: #33312fb9;
+    background-image: linear-gradient(to right bottom, #33312fb9, #33312fb9);
 }
 
 .modaleAdded {
