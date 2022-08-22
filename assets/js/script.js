@@ -12,7 +12,7 @@ function createProductCard(product) {
                 <img src="${product.image}" alt="Nom de la montre : ${product.title}">
             </div>
             <h4>${product.title}</h4>
-            <p class="productPrice">${product.price}€</p>
+            <p class="productPrice">${product.price.toLocaleString()}€</p>
             <p class="productDesc">${product.desc}</p>
             <button class="btnAddProduct" id="${product.id}">ajouter au panier</button>
         </div>`

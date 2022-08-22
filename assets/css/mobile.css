@@ -560,6 +560,11 @@ footer .legal-mentions a {
     margin: 10px 0;
 }
 
+.cartProductCard span:nth-child(3) {
+    font-size: 0.9rem;
+    font-weight: 200;
+}
+
 .cartProductCard h4 {
     padding: 0;
     text-align: start;
