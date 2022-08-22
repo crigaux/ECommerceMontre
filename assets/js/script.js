@@ -21,9 +21,9 @@ function createProductCard(product) {
 function calculCartPrice() {
     let sum = 0;
     document.querySelectorAll('.cartProductCard span:nth-child(3)').forEach(price => {
-        sum += parseInt(price.innerHTML);
+        sum += parseInt(price.innerHTML.replace(/\D/g,''));
     })
-    document.querySelector('.totalCartPrice').innerHTML = '<div><div>TOTAL</div><div>(hors frais de livraison)</div></div><div>' + sum + '€</div>';
+    document.querySelector('.totalCartPrice').innerHTML = '<div><div>TOTAL</div><div>(hors frais de livraison)</div></div><div>' + sum.toLocaleString() + '€</div>';
 }
 
 const addToCart = (e, stock) => {
@@ -55,8 +55,8 @@ function addOneProduct() {
             let quantity = JSON.parse(localStorage.getItem(btn.dataset.id));
             increaseQuantity(btn.dataset.id);
             quantity = JSON.parse(localStorage.getItem(btn.dataset.id));
-            document.querySelector('.increase[data-id ="' + btn.dataset.id + '"] + div').innerHTML = quantity.quantity;
-            document.querySelector('span[data-id ="' + btn.dataset.id + '"]').innerHTML = quantity.price * quantity.quantity + '€';
+            document.querySelector('.productQuantity[data-id ="' + btn.dataset.id + '"]').innerHTML = quantity.quantity;
+            document.querySelector('span[data-id ="' + btn.dataset.id + '"]').innerHTML = (quantity.price * quantity.quantity).toLocaleString() + '€';
             calculCartPrice();
         })
     })
@@ -72,8 +72,8 @@ function substractOneProduct() {
             } else {
                 decreaseQuantity(btn.dataset.id);
                 quantity = JSON.parse(localStorage.getItem(btn.dataset.id));
-                document.querySelector('.increase[data-id ="' + btn.dataset.id + '"] + div').innerHTML = quantity.quantity;
-                document.querySelector('span[data-id ="' + btn.dataset.id + '"]').innerHTML = quantity.price * quantity.quantity + '€';
+                document.querySelector('.productQuantity[data-id ="' + btn.dataset.id + '"]').innerHTML = quantity.quantity;
+                document.querySelector('span[data-id ="' + btn.dataset.id + '"]').innerHTML = (quantity.price * quantity.quantity).toLocaleString() + '€';
             }
             calculCartPrice();
             containerItemsIsEmpty();
@@ -104,14 +104,14 @@ function displayCart() {
             </div>
             <div class="productInfo">
                 <h4>${product.title}</h4>
-                <span>${product.price}€</span>
-                <span data-id="${product.id}">${product.price * product.quantity}€</span>
+                <span>${product.price.toLocaleString()}€</span>
+                <span data-id="${product.id}">${(product.price * product.quantity).toLocaleString()}€</span>
             </div>
             <div>
                 <div class="addproduct-ctn">
-                    <button data-id="${product.id}" class="increase"><i class="fa-solid fa-plus"></i></button>
-                    <div>${product.quantity}</div>
                     <button data-id="${product.id}" class="decrease"><i class="fa-solid fa-minus"></i></button>
+                    <div class="productQuantity" data-id="${product.id}">${product.quantity}</div>
+                    <button data-id="${product.id}" class="increase"><i class="fa-solid fa-plus"></i></button>
                 </div>
             </div>
             <div class="ctn-delete-product">
